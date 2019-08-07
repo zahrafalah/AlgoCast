@@ -1,3 +1,15 @@
+//------------------------------------------------------
+//returning the word
+const subString= (str, word) => {  
+  let split = str.split(" ");
+  let filter = split.filter(function(value) {
+  if (value === word) {
+    return value;
+  } 
+})
+return filter.length ? filter : -1; 
+}
+subString("Two days ago, I was walking with Jafar","walking");
 
 
 //-----------------------------------------------------------

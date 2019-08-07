@@ -1,3 +1,29 @@
+
+
+//-----------------------------------------------------------
+const index = (str,word)=>{
+  let wLen = word.length,
+      j= 0,
+      index =0;
+      // console.log(str.length);
+  for(let i= 0; i< str.length; i++){
+      // console.log(i);
+      if(str[i] === word[j]){
+        // console.log(word[j])
+        j++;
+      }else{
+        j=0;
+        }
+      if (j==0){
+        index = i
+      }else if (j == wLen){
+        return index;
+      }
+      }           
+  }
+index("Two days ago, I was walking with Jafar","Jafar");
+//----------------------------------------------------------------
+
 let Array =[1,2,5,7,9,10] 
 const missed = (Array) => {
     let missYou=[];
@@ -17,69 +43,65 @@ const missed = (Array) => {
   }
 
 missed(Array);
-
-
-
-
 //-----------------------------------------------
 
-// const GCD = (a,b) => {
+const GCD = (a,b) => {
 
-//   let divisor = 2;
-//   let gcd = 1;
-//   while(a>divisor && b>divisor){
-//         if (a % divisor == 0 && b% divisor ==0){
-//           divisor == gcd;
-//         }
-//         else{
-//           divisor++;
-//         }
-//   }
-//   return gcd;
-// }
-// GCD(24,18);
+  let divisor = 2;
+  let gcd = 1;
+  while(a>divisor && b>divisor){
+        if (a % divisor == 0 && b% divisor ==0){
+          divisor == gcd;
+        }
+        else{
+          divisor++;
+        }
+  }
+  return gcd;
+}
+GCD(24,18);
 
-// const rand = (n) =>
-//   const str = "abcdefghijklmnopqrstuvwxyz0123456789";
-//   let newStr = "";
-//   for (let i= 0;i<n;i++ ){   
-//       newStr += str[Math.floor(Math.random()* str.length)];      
-//   }
-//   return newStr;
-// }
-// rand(7);
+const rand = (n) =>{
+  const str = "abcdefghijklmnopqrstuvwxyz0123456789";
+  let newStr = "";
+  for (let i= 0;i<n;i++ ){   
+      newStr += str[Math.floor(Math.random()* str.length)];      
+  }
+  return newStr;
+}
+rand(7);
 
 
 //------------------------------------------------------------
 //Prime function
-// const Array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]
+const Array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]
 
-// const prime = (Array) => {
-//   for(let i = 0; i<=Array.length; i++){
-//     // console.log(i);
-//     let n = Array[i]
-//     for(let j= 2 ; j<n; j++){
-//         // console.log(j)
-//         if(n% j === 0){
-//           Array.splice(i,1);  
-//         }
-//     }
-//   }
-//   return Array;
-// }
-// prime(Array);
+const prime = (Array) => {
+  for(let i = 0; i<=Array.length; i++){
+    // console.log(i);
+    let n = Array[i]
+    for(let j= 2 ; j<n; j++){
+        // console.log(j)
+        if(n% j === 0){
+          Array.splice(i,1);  
+        }
+    }
+  }
+  return Array;
+}
+prime(Array);
 
 
 //--------------------------------------------------------------
-// const fib = (n) => {
-//     if ( n<=1 ){
-//       return [0,1];
-//     }
-//     let arr = fib(n-1);
-//     arr.push(arr[arr.length-1]+arr[arr.length-2]);  
-//     return arr;
-// }
-// fib(5);
+const fib = (n) => {
+    if ( n<=1 ){
+      return [0,1];
+    }
+    let arr = fib(n-1);
+    arr.push(arr[arr.length-1]+arr[arr.length-2]);  
+    return arr;
+}
+fib(5);
 
 //------------------------------------------------------------------------------------------
 
